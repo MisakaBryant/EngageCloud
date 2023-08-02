@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class RESTController {
 
     //计数器限流100次/s
-    private static final RateLimiter limiter = RateLimiter.create(1.0);
+    private static final RateLimiter limiter = RateLimiter.create(100.0);
 
     @GetMapping("/")
     public ResponseEntity index() {
