@@ -1,1 +1,1 @@
-java ${JAVA_OPS} -Duser.timezone=Asia/Shanghai -Djava.security.egd=file:/dev/./urandom -jar /app/application.jar
+java ${JAVA_OPS} -Duser.timezone=Asia/Shanghai -Djava.security.egd=file:/dev/./urandom -jar /app/application-0.0.1.jar
