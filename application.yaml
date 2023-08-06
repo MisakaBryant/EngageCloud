@@ -23,7 +23,7 @@ spec:
       hostname: application
       containers:
         - name: application
-          image: application:20
+          image: harbor.edu.cn/nju21/application:{VERSION}
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
