@@ -25,6 +25,8 @@ spec:
         - name: application
           image: harbor.edu.cn/nju21/application:{VERSION}
           imagePullPolicy: IfNotPresent
+          imagePullSecrets:
+            - name: regcred
           ports:
             - containerPort: 8080
           resources:
