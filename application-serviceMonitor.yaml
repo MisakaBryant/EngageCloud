@@ -13,7 +13,7 @@ spec:
       scheme: 'http'
   selector:
     matchLabels:
-      app: prometheus-test-demo
+      app: application
   namespaceSelector:
     matchNames:
       - nju21
