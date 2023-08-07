@@ -54,6 +54,7 @@ spec:
   type: NodePort
   ports:
     - name: tcp
+      nodePort: 32531
       protocol: TCP
       port: 8080
       targetPort: 8080
