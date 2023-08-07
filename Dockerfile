@@ -9,3 +9,5 @@ WORKDIR /app
 RUN chmod a+x runboot.sh
 
 CMD sh -c /app/runboot.sh
+
+EXPOSE 8080
