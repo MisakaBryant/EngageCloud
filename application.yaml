@@ -19,6 +19,11 @@ spec:
     metadata:
       labels:
         app: application
+      annotations:
+        prometheus.io/path: /actuator/prometheus
+        prometheus.io/port: "8080"
+        prometheus.io/scheme: http
+        prometheus.io/scrape: "true"
     spec:
       hostname: application
       containers:
@@ -48,7 +53,10 @@ metadata:
 spec:
   type: NodePort
   ports:
-    - port: 8080
+    - name: tcp
+      nodePort: 32531
+      protocol: TCP
+      port: 8080
       targetPort: 8080
   selector:
     app: application
