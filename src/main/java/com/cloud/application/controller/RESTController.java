@@ -1,7 +1,7 @@
 package com.cloud.application.controller;
 
 import com.cloud.application.entity.ResponseEntity;
-import com.cloud.application.exception.TooMantRequestException;
+import com.cloud.application.exception.TooManyRequestException;
 import com.cloud.application.metrics.QPSMetrics;
 import com.google.common.util.concurrent.RateLimiter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,7 @@ public class RESTController {
             QPSMetrics.increment();
             return new ResponseEntity("Hello");
         }
-        throw new TooMantRequestException("Too Many Request");
+        throw new TooManyRequestException("Too Many Request");
     }
 
 }
