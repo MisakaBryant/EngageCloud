@@ -19,6 +19,7 @@ public class RESTController {
 
     @GetMapping("/")
     public ResponseEntity index() {
+        //尝试获取令牌
         if (limiter.tryAcquire()) {
             QPSMetrics.increment();
             return new ResponseEntity("Hello");
