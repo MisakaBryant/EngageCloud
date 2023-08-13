@@ -19,18 +19,20 @@ public class QPSMetrics {
                 .register(collectorRegistry);
     }
 
+    // 由 Controller 调用
     public synchronized void increment() {
         count++;
     }
 
+    // 每秒报告 QPS
     @Scheduled(fixedRate = 1000)
     public void report() {
         qps.set(count / 60.0);
     }
 
+    // 每分钟重置访问次数
     @Scheduled(fixedRate = 60000)
     public void reset() {
         count = 0;
     }
-
 }
